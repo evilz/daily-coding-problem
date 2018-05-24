@@ -1,5 +1,6 @@
 namespace DailyCodingProblem
 
+open System
 
 module Problem1 = 
 
@@ -22,7 +23,7 @@ module Problem1 =
     let private printSolution array k = 
         printfn "Array is %A" array
         printfn "k is %i" k
-        printfn "Answer is %b" (anyTwoSumOf array k)
+        cprintf ConsoleColor.DarkGreen "Answer is %b" (anyTwoSumOf array k)
         printfn ""
 
     let private solution() =

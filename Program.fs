@@ -28,9 +28,9 @@ module EntryPoint =
 
         let index = getProblemIndex()
 
-        printfn "PROBLEM %i: \n\r============ \n\r%s" index problems.[index - 1].subject
+        cprintf ConsoleColor.DarkCyan "PROBLEM %i: \n\r==========\n\r" index 
+        cprintf ConsoleColor.Gray "%s\n\r" problems.[index - 1].subject
         printfn "" 
-        printfn "Answer:"
         problems.[index - 1].solution()
         
         printfn "" 
