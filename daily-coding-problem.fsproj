@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>daily_coding_problem</RootNamespace>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Types.fs" />
