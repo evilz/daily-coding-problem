@@ -1,38 +1,34 @@
 ﻿namespace DailyCodingProblem
 
+
 module EntryPoint =
 
     open System
+    open Expecto
+    open Hopac
+    open Logary
+    open Logary.Configuration
+    open Logary.Adapters.Facade
+    open Logary.Targets
 
     let (|Int|_|) (str:string) =
        match Int32.TryParse(str) with
        | (true,int) -> Some(int)
        | _ -> None
 
-    let problems = 
-        [ Problem1.problem ] 
 
+    [<Tests>]
+    let tests =
+        testSequenced <| testList "Daily coding problem" [
+            Problem1.tests
+            Problem2.tests
+            Problem3.tests
+          ]
 
     [<EntryPoint>]
-    let main argv =
+    let main args =
 
-        printfn "Choose a problem from 1 to %i" problems.Length
-
-        let rec getProblemIndex() = 
-            Console.ReadLine() 
-                    |> function
-                    |  Int i when i <= problems.Length && i > 0 -> i
-                    | _ -> 
-                        printfn "Please choose from 1 to %i !!!" problems.Length
-                        getProblemIndex()
-
-        let index = getProblemIndex()
-
-        cprintf ConsoleColor.DarkCyan "PROBLEM %i: \n\r==========\n\r" index 
-        cprintf ConsoleColor.Gray "%s\n\r" problems.[index - 1].subject
-        printfn "" 
-        problems.[index - 1].solution()
-        
-        printfn "" 
-        printfn "" 
-        0 // return an integer exit code
+        //Problem3.serialize Problem3.node |> printfn "%s"
+        //Problem3.deserialize (Problem3.serialize Problem3.node) |> printfn "%A"
+        //0
+        Tests.runTestsWithArgs {defaultConfig with verbosity  = Logging.Verbose }   args tests

@@ -7,6 +7,14 @@
   <ItemGroup>
     <Compile Include="Types.fs" />
     <Compile Include="problem1.fs" />
+    <Compile Include="Problem2.fs" />
+    <Compile Include="Problem3.fs" />
     <Compile Include="Program.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Expecto" Version="8.0.0" />
+    <PackageReference Include="Expecto.BenchmarkDotNet" Version="8.0.0" />
+    <PackageReference Include="Expecto.FsCheck" Version="8.0.0" />
+    <PackageReference Include="Logary.Adapters.Facade" Version="5.0.0-beta.11" />
   </ItemGroup>
 </Project>
