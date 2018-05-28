@@ -72,10 +72,7 @@ module Problem3 =
 
         let result, _ = innerDeserialize chunks
         result
-
-    //     let product = (1, array) ||> Seq.fold ( * )
-    //     array |> Seq.map (fun x -> product / x) 
-
+]
     let tests = 
         testList "Problem 3 : Serialize/deserialize Binnary Tree" [
             test "S/D node" {
