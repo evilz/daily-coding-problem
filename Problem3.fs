@@ -50,7 +50,7 @@ module Problem3 =
     
     let node = { value="root"; left = Some (left)  ; right = Some (right) }
 
-    printf "%s" (serialize node)
+    //printf "%s" (serialize node)
 
     let deserialize (s:string) =
         let chunks = s.Split(separator) |> Seq.toList

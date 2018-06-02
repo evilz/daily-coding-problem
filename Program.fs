@@ -23,12 +23,11 @@ module EntryPoint =
             Problem1.tests
             Problem2.tests
             Problem3.tests
+            Problem4.tests
           ]
 
     [<EntryPoint>]
     let main args =
 
-        //Problem3.serialize Problem3.node |> printfn "%s"
-        //Problem3.deserialize (Problem3.serialize Problem3.node) |> printfn "%A"
-        //0
         Tests.runTestsWithArgs {defaultConfig with verbosity  = Logging.Verbose }   args tests
+        //Tests.runTestsWithArgs defaultConfig args tests
