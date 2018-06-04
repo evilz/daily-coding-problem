@@ -24,10 +24,12 @@ module EntryPoint =
             Problem2.tests
             Problem3.tests
             Problem4.tests
+            Problem5.tests
+            Problem7.tests
           ]
 
     [<EntryPoint>]
     let main args =
-
+        Problem7.decode "111" |> printfn "%A"
         Tests.runTestsWithArgs {defaultConfig with verbosity  = Logging.Verbose }   args tests
         //Tests.runTestsWithArgs defaultConfig args tests
