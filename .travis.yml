@@ -1,9 +1,15 @@
-language: csharp
-dotnet: 3.0.100-preview4-011223
-mono: none
+dist: xenial
 env:
   global:
     - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
     - DOTNET_CLI_TELEMETRY_OPTOUT=true
+addons:
+  snaps:
+  - name: dotnet-sdk
+    classic: true
+    channel: latest/beta
+sudo: required
+language: csharp
+mono: none
 script:
   - ./CI.sh
