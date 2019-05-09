@@ -12,4 +12,5 @@ sudo: required
 language: csharp
 mono: none
 script:
+  - dotnet --version
   - bash ./CI.sh
