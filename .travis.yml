@@ -12,4 +12,4 @@ sudo: required
 language: csharp
 mono: none
 script:
-  - ./CI.sh
+  - bash ./CI.sh
