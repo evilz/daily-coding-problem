@@ -5,5 +5,5 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- bash: CI.sh
+- script: ./CI.sh
 
