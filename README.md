@@ -1,5 +1,7 @@
 # daily-coding-problem ![](https://api.travis-ci.org/evilz/daily-coding-problem.svg?branch=master)
 
-[Problem 1](problem1.fs)
-[Problem 2](Problem2.fs)
-[Problem 3](Problem3.fs)
+
+## Steps 
+
+- Restore nuget : `dotnet restore --packages packages`
+- Run fsx : `dotnet fsi ./01.Arrays/1.GetProductOfOthers.fsx `
