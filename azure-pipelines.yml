@@ -10,7 +10,7 @@ steps:
   inputs:
     packageType: sdk
     includePreviewVersions: true
-    version: '3.0.0-preview5'
+    version: '3.x'
     installationPath: $(Agent.ToolsDirectory)/dotnet
 
 - script: ./CI.sh
