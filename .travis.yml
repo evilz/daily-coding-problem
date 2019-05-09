@@ -12,5 +12,6 @@ sudo: required
 language: csharp
 mono: none
 script:
+  - sudo snap alias dotnet-sdk.dotnet dotnet
   - dotnet --version
-  - bash ./CI.sh
+  - ./CI.sh
