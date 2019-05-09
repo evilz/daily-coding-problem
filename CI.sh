@@ -1,5 +1,6 @@
 #!/bin/bash
 #
+dotnet restore --packages packages
 dirs=('./01.Arrays' './02.String');
 
 for dir in "$dirs"
