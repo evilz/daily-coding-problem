@@ -9,6 +9,7 @@ steps:
   displayName: 'Use .NET Core sdk'
   inputs:
     packageType: sdk
+    includePreviewVersions: true
     version: '3.0.0-preview5'
     installationPath: $(Agent.ToolsDirectory)/dotnet
 
