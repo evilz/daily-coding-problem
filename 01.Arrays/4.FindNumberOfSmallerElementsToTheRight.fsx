@@ -21,10 +21,9 @@ open Expecto
 
 let bisectLeft (array: 'a array) item =
     let rec loop (array:'a array) item low high =
-      match low with
-      | l when l < 0 -> failwith "lo must be non-negative"
-      | l when l >= high -> l
-      | _ -> 
+      if   low < 0     then failwith "lo must be non-negative"
+      elif low >= high then low
+      else
           let mid = (low + high) >>> 1
           match array.[mid] < item with
           | true -> loop array item (mid+1) high 

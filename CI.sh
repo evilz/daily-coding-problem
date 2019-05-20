@@ -1,9 +1,12 @@
 #!/bin/bash
 #
 dotnet restore --packages packages
-dirs=('./01.Arrays' './02.String');
+dirs=("./01.Arrays ./02.Strings")
 
-for dir in "$dirs"
+for i in $dirs; do echo $i; done
+
+
+for dir in $dirs
 do
     echo "########## $dir ##########"
     echo ""
