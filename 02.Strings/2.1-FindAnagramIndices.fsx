@@ -115,5 +115,3 @@ let tests =
   
 
 runTests defaultConfig tests
-
-// let getOtherProduct
