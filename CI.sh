@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 dotnet restore --packages packages
-dirs=("./01.Arrays ./02.Strings")
+dirs=("./01.Arrays ./02.Strings ./03.LinkedLists")
 
 for i in $dirs; do echo $i; done
 
